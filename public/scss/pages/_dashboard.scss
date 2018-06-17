@@ -1,0 +1,770 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+}
+
+.dashbord_view {
+    padding-top: 90px;
+    background: $bg-offwhite;
+    @include maxmd {
+        padding-top: 50px;
+    }
+    @include maxsm {
+        padding-top: 30px;
+    }
+}
+
+.dashbord_view_left,
+.dashbord_view_right {
+    .das_title {
+        font-family: 'ab';
+        font-size: 45px;
+        line-height: 30px;
+        color: $p-cl;
+        margin-bottom: 30px;
+        a{
+            color: $p-cl;
+            border-bottom: 1px solid;display: inline-block;line-height: 0.85;
+            &:hover{
+                color:#d81c02;
+            }
+        }
+        &.custom-section {
+            margin-top: 50px;
+            @include maxms {
+                margin-top: 20px;
+            }
+        }
+        @include maxlg {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        @include maxsm {
+            font-size: 30px;
+        }
+        @include maxms {
+            font-size: 26px;
+        }
+        &.profile-title{
+            display: inline-block;
+        }
+    }
+    .das_your_profile {
+        border: 1px solid $p-cl;
+        padding: 35px 35px 30px 35px;
+        margin-bottom: 20px;
+        @include maxlg {
+            padding: 15px;
+        }
+        .your_profile_img {
+            width: 60%;
+            display: inline-block;
+            margin: 0 -2px;
+            @include maxlg {
+                width: 50%;
+            }
+            img {
+                width: 100%;
+                display: block;
+            }
+            h6 {
+                font-family: 'hl';
+                color: $r-cl;
+                font-size: 26px;
+                line-height: 30px;
+                text-align: center;
+                margin: 30px 0 0 0;
+                @include maxms {
+                    font-size: 22px;
+                    margin: 15px 0 0;
+                }
+            }
+        }
+        .your_profile_view {
+            display: inline-block;
+            width: 40%;
+            vertical-align: top;
+            @include maxlg {
+                width: 50%;
+            }
+            h4 {
+                font-size: 18px;
+                line-height: 24px;
+                text-align: right;
+                margin: 0;
+                a {
+                    display: inline-block;
+                    color: $p-cl;
+                    font-family: 'hn-b';
+                    text-transform: uppercase;
+                    border-bottom: 1px solid $p-cl;
+                }
+            }
+            .your_progress {
+                padding-left: 41px;
+                padding-top: 58px;
+                @include maxlg {
+                    padding-left: 20px;
+                    padding-top: 40px;
+                }
+                @include maxmd {
+                    padding-left: 15px;
+                    padding-top: 20px;
+                }
+                @include maxms {
+                    padding-top: 10px;
+                }
+                h6 {
+                    font-size: 25px;
+                    line-height: 30px;
+                    color: $r-cl;
+                    font-family: 'hl';
+                    @include maxlg {
+                        font-size: 22px;
+                    }
+                    @include maxmd {
+                        font-size: 18px;
+                    }
+                    @include maxms {
+                        font-size: 16px;
+                    }
+                }
+                h2 {
+                    font-family: 'ht';
+                    font-size: 75px;
+                    color: $p-cl;
+                    font-family: 'ht';
+                    @include maxmd {
+                        font-size: 58px;
+                    }
+                    @include maxms {
+                        font-size: 45px;
+                    }
+                }
+                h5 {
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: $r-cl;
+                    font-family: 'hn-b';
+                    @include maxms {
+                        font-size: 20px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $r-cl;
+                    font-family: 'hn-b';
+                    padding-top: 50px;
+                    margin-bottom: 0;
+                    @include maxmd {
+                        padding-top: 30px;
+                    }
+                    @include maxms {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .my_interests {
+        margin-top: 30px;
+        h2,.heading-tag {
+            font-size: 26px;
+            line-height: 30px;
+            font-family: 'hn-b';
+            color: $p-cl;
+            margin-bottom: 35px;
+            @include maxsm {
+                font-size: 22px;
+                margin-bottom: 35px;
+            }
+            a {
+                text-decoration: none;
+                font-size: 40px;
+                color: $p-cl;
+                @include maxms {
+                    font-size: 30px;
+                }
+                &.addto{
+                    /*font-size: 28px;
+                    margin-right: 10px;
+                    color: $white;*/
+                   
+                    position: absolute;
+                    width: 24px;
+                    height: 29px;
+                    margin-right: 10px;
+                    left: 0;
+                    .favourite-text{margin-top: 40px;}
+                    img {
+                        top: 3px;
+                        position: absolute;
+                        &.hover-img{
+                            display: none;
+                        } 
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    &.selected{
+                        .hover-img{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .my_chart {
+            text-align: center;
+            h4 {
+                font-size: 26px;
+                color: $r-cl;
+                line-height: 30px;
+                font-family: 'ht';
+                margin-top: 15px;
+               // min-height: 90px;
+                @include maxmd{
+                    font-size: 22px;
+                }
+                @include maxsm {
+                    font-size: 20px;
+                }
+                @include maxms{
+                    min-height: auto;
+                }
+                a{
+                    color: $r-cl;
+                    border-bottom: 1px solid;
+                    /*display: inline-block;
+                    line-height: 0.85;*/
+                    &:hover{
+                        color: $cl-complete;
+                        //border-color: $cl-complete;
+                    }
+                }
+            }
+        }
+        p {
+            display: block;
+            text-align: right;
+            margin-top: 40px;
+            margin-bottom: 0;
+            width: 100%;
+            @include maxmd {
+                margin-top: 20px;
+            }
+            span{
+                color: $p-cl;
+                display: inline-block;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 30px;
+                text-transform: uppercase;
+                font-family: 'hn-b';
+                border-bottom: 1px solid $p-cl;cursor: pointer;
+            }
+            a,.expand {
+                color: $p-cl;
+                display: inline-block;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 30px;
+                text-transform: uppercase;
+                font-family: 'hn-b';
+                border-bottom: 1px solid $p-cl;cursor: pointer;
+                &:hover{
+                    color: $dark;border-color: $dark;
+                }
+            }
+        }
+        &.interest-block{
+            margin-top: 30px;
+        }
+        .loader-btn{
+            text-align: center !important; margin-top: 5px !important;
+        }
+        .unbox-btn{
+            margin-bottom: 25px;
+            span.coins-outer.career_coins{margin-left: -5px;}
+        }
+    }
+    .my_career_tab {
+        .panel-heading {
+            padding: 0;
+            border: 0px;
+            background-color: transparent;
+            a {
+                padding: 25px 45px 25px 30px;
+                font-size: 26px;
+                color: $white;
+                text-decoration: none;
+                font-family: 'hn-b';
+                letter-spacing: 1px;
+                position: relative;
+                @include maxmd {
+                    padding: 25px 30px 25px 15px;
+                    font-size: 20px;
+                }
+                @include maxms {
+                    padding: 15px 30px 15px 15px;
+                    font-size: 18px;
+                }
+                span {
+                    float: right;
+                    display: inline-block;
+                    font-size: 24px;
+                    font-family: 'ht';
+                    @include maxlg{
+                        font-size: 20px;margin-top: 3px;
+                    }
+                    @include maxmd{
+                        font-size: 16px;
+                    }
+                    @include maxms {
+                        float: none;
+                        margin-top: 10px;
+                        font-size: 14px;
+                        display: block;
+                    }
+                }
+                &:before {
+                    position: absolute;
+                    font-family: 'ht';
+                    content: ">";
+                    top: 33%;
+                    right: 25px;
+                    font-size: 25px;
+                    transform: rotate(-90deg) !important;
+                    @include maxmd{
+                        right: 10px;
+                        font-size: 20px;
+                        top: 36%;
+                    }
+                    @include maxms {
+                        top: 25%;
+                        right: 15px;
+                    }
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            .career-cl {
+                background: $m-cl;
+                display: block;
+            }
+            .career-lc {
+                background: $remember-cl;
+                display: block;
+            }
+        }
+    }
+    .my_network_cont {
+        p {
+            margin-top: 0;
+        }
+        .my_net_view {
+            text-align: center;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+            }
+            h4 {
+                font-size: 16px;
+                color: $r-cl;
+                font-family: 'hn-b';
+                margin-top: 10px;
+                a{
+                
+                font-size: 16px;
+                color: $r-cl;
+                font-family: 'hn-b';
+                margin-top: 10px;
+                    &:hover{
+                        color: $cl-complete;
+                    }
+                }
+            }
+        }
+    }
+    .icon-heading {
+        display: inline-block;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "\e903";
+            bottom: -20px;
+            right: -75px;
+            font-family: 'proteen' !important;
+            font-size: 60px;
+            color: $cl-complete;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.dashbord_view_right {
+    .panel-collapse {
+        border: 1px solid $white;
+        border-top: none !important;
+    }
+    .panel-body {
+        background: $bg-offwhite;
+    }
+    .quiz1 {
+        .panel-heading .panel-title a {
+            background: $i-cl !important;
+        }
+        .panel-collapse {
+            border-color: $i-cl !important;
+        }
+    }
+    .quiz2 {
+        .panel-heading .panel-title a {
+            background: $p-cl !important;
+        }
+        .panel-collapse {
+            border-color: $p-cl !important;
+        }
+    }
+    .quiz3 {
+        .panel-heading .panel-title a {
+            background: $s-cl !important;
+        }
+        .panel-collapse {
+            border-color: $s-cl !important;
+        }
+    }
+    .quiz_view {
+        padding-top: 20px;
+        color: $r-cl;
+        .panel-title {
+            a {
+                display: block;
+            }
+        }
+    }
+    .time_noti_view {
+        color: $p-cl;
+        a:focus {
+            text-decoration: none
+        }
+        .time_type {
+            .time-tag {
+                font-size: 18px;
+                font-family: "hb";
+                line-height: 50px;
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 15px;
+            }
+            i {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 50px;
+            }
+        }
+        .help_noti {
+            font-size: 35px;
+        }
+    } // Second section start here
+    .career-data {
+        a{
+                color: $white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        h2 {
+            color: $white;
+            margin-bottom: 20px;
+                position: relative;
+   
+            @include maxms {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.my_career_tab .panel-title a.collapsed:before {
+   // transform: rotate(90deg) !important;
+}
+
+.my_career_tab .panel-title a:before {
+   // transform: rotate(-90deg) !important;
+}
+
+.quiz-que {
+    .que {
+        text-align: center;
+        position: relative;
+        display: block;
+        margin: 0 0 40px 0;
+        padding-left: 70px;
+        padding-top: 40px;
+        font-size: 33px;
+        font-family: 'hl';
+        color: $r-cl;
+        font-style: normal;
+        @include maxms {
+            padding-left: 0;
+            padding-top: 0px;
+            font-size: 18px !important;
+        }
+        i {
+            font-size: 54px;
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            transform: rotate(-324deg) scaleX(-1);
+            color: $p-cl;
+            @include maxms{
+                display: none;
+            }
+        }
+    }
+    .quiz-ans {
+        padding-left: 86px;
+        @include maxlg {
+            padding-left: 15px;
+        }
+        @include maxms {
+            padding-left: 10px;
+        }
+        .radio input:checked + .checker:after,
+        .radio-inline input:checked + .checker:after {
+            background: $p-cl;
+            top: 4px;
+            left: 4px;
+            width: 14px;
+            height: 14px;
+        }
+        label {
+            display: block;
+            margin-bottom: 40px;
+            .checker {
+                top: 5px;
+                position: relative;
+                display: block;
+                margin-left: -40px;
+            }
+            em {
+                font-size: 23px;
+                font-family: 'hn-b';
+                color: $r-cl;
+                font-style: normal;
+                @include maxms {
+                    font-size: 16px;
+                }
+            }
+        }
+        .radio input:checked ~ em,
+        .radio-inline input:checked ~ em {
+            color: $p-cl !important;
+        }
+        .next-que {
+            color: $p-cl;
+            font-size: 90px;
+            transform: rotate(50deg);
+            @include maxsm{
+                font-size: 80px;
+            }
+            i{
+                display: inline-block;
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+.my_career_tab{
+    .quiz_view .quiz-ans .next-que i{
+        transform: scaleX(-1);
+    }
+}
+// Second section start here
+.career-data-color-1 {
+    background-color: $m-cl;
+}
+
+.career-data-color-2 {
+    background-color: $remember-cl;
+}
+
+.career-data-color-3 {
+    background-color: $cl-analyzing;
+}
+
+.career-data {
+    padding:20px 15px;
+    margin-bottom: 3px;
+    position: relative;
+    h2 {
+        color: $white;
+        margin-bottom: 20px;
+        padding-left: 33px;
+        padding-right: 110px;
+        font-size: 24px !important;
+        @include maxmd{
+            padding-right: 74px;font-size: 20px !important;
+        }
+        @include maxms{
+            font-size: 18px !important;
+        }
+    }
+    .addto {
+        color: $white;
+        font-size: 18px;
+        font-family: 'hn-b';
+        text-decoration: underline;
+        line-height: 20px;
+        @include maxmd {
+            font-size: 16px;
+        }
+        &:hover{
+            color: $dark;
+        }
+    }
+    .status-career {
+        font-size: 24px;
+        font-family: 'ht';
+        color: $white;
+        line-height: 20px;
+        opacity: 0.7;
+        position: absolute;top: 25px;right: 15px;
+        @include maxmd {
+            font-size: 18px;
+        }
+        @include maxms {
+            //margin-top: 10px;
+            display: block
+        }
+        &:hover{
+            color: $dark;
+        }
+    }
+   
+}
+
+.data-explainations {
+    margin: 20px 0;
+    @include maxmd {
+        margin-bottom: 10px;
+    }
+    .data {
+        float: left;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+    .small-box {
+        height: 15px;
+        width: 15px;
+        margin-right: 5px;
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        color: $r-cl;
+        font-family: 'hn-b';
+    }
+    &.data-interest{
+        margin-top: -48px;
+        text-align: center;
+        .content{
+            background: $bg-offwhite;
+            display: inline-block;
+            padding: 0 15px;
+            @include maxsm{
+                padding: 0 10px;
+            }
+        }
+        @include maxlg{
+            margin-top: -28px;
+        }
+        /*@include maxsm{
+            margin-top: 0;
+            text-align: left;
+        }*/
+        .data{
+            display: inline-block;float: none;
+            span{
+                @include maxlg{
+                    font-size: 15px;
+                }
+                @include maxms{
+                    font-size: 14px;
+                }
+            }
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.my_career_tab {
+    @include maxmd {
+        .quiz-que .que {
+            padding-left: 20px;
+            padding-top: 70px;
+            font-size: 22px;
+            line-height: 1.2;
+        }
+        .quiz-que .quiz-ans {
+            padding-left: 20px;
+            label {
+                margin-bottom: 20px;
+            }
+            em {
+                font-size: 18px;
+            }
+        }
+    }
+}
+[class*="sec-wrap-"] {
+    display: none;
+}
+.das_your_profile.my_interests .col-xs-6{
+    @include maxms{
+        width: 100%;
+    }
+}
+.heading-tag:hover{color: $dark !important; }
+.profile_section .flex-container .flex-items{align-items: flex-start;justify-content: center;}
+.quiz-ans{
+    .question-img{
+        width: auto;
+       // max-height: 300px;
+        margin: 0 auto 30px;
+       // max-width: 310px;
+        text-align: center;
+    }
+}
+.career-data-nomatch{
+    background: #ccc !important;
+}
+.popover-closer{
+    display: none !important;
+    @include maxsm{
+        display: block !important;
+    }    
+}
+.dashbord_view_right .my_career_tab #accordionx .panel-heading a.collapsed:before{
+        transform: rotate(90deg) !important;
+}
+.dashbord_view_right .my_career_tab #accordionx .panel-heading a:before{
+    transform: rotate(-90deg) !important;
+}
+.dashbord_view_left .my_career_tab .panel-heading a:before{transform: rotate(0deg) !important;}  
+.dashbord_view_left .das_your_profile .your_profile_view h4{
+    float: right;
+    margin-top: 8px;
+    margin-right: 11px;}
+.dashbord_view_right .my_interests .custom-modal .modal-body p{text-align: left;margin-top: 0;}
+.career-consider h2{margin-bottom: 5px !important;}

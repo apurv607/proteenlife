@@ -1,0 +1,126 @@
+footer {
+    background-color: $dark;
+    padding: 50px 0;
+    color: $light;
+    font-size: 16px;
+    font-family: 'hb';
+    @include maxsm {
+        padding: 20px 0;
+        text-align: center
+    }
+    a {
+        text-decoration: none;
+        color: $light;
+        font-family: 'hb';
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    li {
+        display: inline-block;
+    }
+    .links {
+        li {
+            border-right: 1px solid #616161;
+            padding: 0 8px 0 5px;
+            margin-bottom: 10px;
+            &:last-child {
+                border-right: none;
+            }
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+    .left {
+        span {
+            display: block; //padding-top: 15px;
+            font-family: 'h';
+            font-size: 12px;
+            strong {
+                //font-family: 'hn-b';
+                font-weight: 900;
+                //font-size: 20px;
+            }
+        }
+        li{
+            &:last-child{
+                span{
+                    /*font-family: "open sans",sans-serif;
+                    font-size: 12px;*/
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .social {
+        @include maxsm {
+            margin-top: 20px;
+        }
+        text-align:right;
+        @include maxsm {
+            text-align: center;
+        }
+        li {
+            margin: 0 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .icon-search {
+            width: 25px;
+            display: inline-block;
+            margin-right: -20px;
+            position: relative;
+            top: -19px;
+        }
+        .icon-img,
+        .icon-hover {
+
+            position: absolute;
+            left: -16px;
+        }
+        .icon-hover {
+            display: none;
+        }
+        a {
+            font-size: 16px;
+            display: block;
+            text-decoration: none;
+            position: relative;
+        }
+    }
+    @include sm {
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+    }
+
+
+    .store {
+        display: block;
+        text-align: right;
+        padding-top: 15px;
+        @include maxsm {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+    }
+}
+
+footer .social a:hover .icon-search .icon-img {
+    display: none;
+}
+
+footer .social a:hover .icon-search .icon-hover {
+    display: block;
+}

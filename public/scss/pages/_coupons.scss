@@ -1,0 +1,194 @@
+.coupons-heading {
+    h1 {
+        margin-bottom: 11px; // @include maxlg {
+        //     font-size: 60px;
+        // }
+    }
+    p {
+        font-family: hl;
+        max-width: 55%;
+        margin: 0 auto;
+        @include maxlg {
+            max-width: 70%;
+            font-size: 20px;
+        }
+        @include maxmd {
+            max-width: 85%;
+        }
+        @include maxsm {
+            max-width: 100%;
+            font-size: 17px;
+        }
+    }
+}
+
+.sec-coupons {
+    padding: 53px 0 40px;
+    @include maxlg {
+        padding-top: 20px;
+    }
+    @include maxsm {
+        padding: 10px 0;
+    }
+    .list-procoins {
+        padding: 0 5px;
+        @include maxmd {
+            padding: 0;
+        }
+    }
+    .row {
+        margin: 0 -20px;
+        @include maxmd {
+            margin: 0 -15px;
+        }
+        [class*=col-] {
+            padding: 0 20px;
+            @include maxmd {
+                padding: 0 15px;
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+    .list-procoins {
+        max-width: 100%;
+        margin: 0;
+        @include maxlg {
+            margin-top: 0 !important;
+        }
+        .block-procoins {
+            background: $white;
+            padding: 30px 20px;
+            @include maxmd {
+                padding: 20px;
+            }
+            .coin-info {
+                margin-bottom: 35px;
+                .icon {
+                    margin-bottom: 31px;
+                    @include maxmd {
+                        width: 80%;
+                        margin: 0 auto 31px;
+                    }
+                }
+                h4 {
+                    padding-bottom: 47px;
+                    margin-bottom: 26px;
+                    @include maxlg {
+                        padding-bottom: 30px;
+                    }
+                    @include maxmd {
+                        padding-bottom: 20px;
+                    }
+                    &:before {
+                        width: 83%;
+                    }
+                }
+                p {
+                    margin-bottom: 47px;
+                    line-height: 1.5;
+                    max-width: 73%;
+                    @include maxmd {
+                        font-size: 15px;
+                        margin-bottom: 30px;
+                    }
+                }
+                .btn {
+                    display: block;
+                    margin: 0 auto 30px;
+                    border: 2px solid $cl-complete;
+                    color: $cl-complete;
+                    font-size: 24px;
+                    font-family: hl;
+                    max-width: 222px;
+                    padding: 10px 15px;
+                    text-transform: capitalize;
+                    &.btn-consume {
+                        background: $cl-complete;
+                        color: $white;
+                        min-width: 222px;
+                        @include maxmd {
+                            min-width: 162px;
+                        }
+                    }
+                    @include maxmd {
+                        font-size: 20px;
+                        max-width: 162px;
+                        padding: 6px 15px;
+                    }
+                    @include maxsm {
+                        font-size: 17px;
+                    }
+                    @include maxms {
+                        font-size: 14px;
+                        padding: 8px 15px;
+                    }
+                    &:hover,
+                    &:focus,
+                    &.sending {
+                        background: $i-cl;
+                        border-color: $i-cl;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gift {
+    .btn-gift {
+        border: 2px solid $cl-complete;
+        color: $cl-complete;
+        background: $white;
+        padding: 6px 20px;
+    }
+}
+
+.btn:focus,
+.btn:active {
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+#userData, .userData {
+    position: relative;
+    min-height: 387px;
+}
+
+.no-data {
+    position: absolute;
+    color: #565b5f;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    &.bg-offwhite{
+        background: $bg-offwhite !important;
+    }
+    i {
+        font-size: 70px;
+        @include maxsm{
+            font-size: 50px;
+        }
+    }
+    p {
+        font-size: 21px;
+        font-family: hn-b;
+        color: #565b5f;
+        margin-top: 13px;
+        @include maxsm{
+            font-size: 17px;
+        }
+    }
+    .data-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+}

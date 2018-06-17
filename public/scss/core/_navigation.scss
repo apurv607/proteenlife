@@ -1,0 +1,441 @@
+nav {
+    background-color: $dark;
+    .logo {
+        padding: 1px 0 0;
+        @include maxsm {
+            img {
+                max-width: 74%;
+            }
+        }
+        @include maxms {
+            padding: 12px 0;
+            width: 85px;
+            img {
+                max-width: 80%;
+            }
+        }
+    }
+    .menu-toggle {
+        @include maxsm {
+            padding: 10px 0;
+        }
+    }
+    @include maxsm {
+        > .container {
+            position: relative;
+        }
+    }
+}
+
+.i-user {
+    width: 41px;
+    height: 41px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    @include maxms {
+        width: 31px;
+        height: 31px;
+    }
+    img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu-toggle {
+    color: #fff;
+    font-size: 28px;
+}
+
+.main-menu {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    transform: translateY(-100%);
+    &.bg-light {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    &.active {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .menu-container {
+        display: table;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        h2{
+            display: block;
+           /*  margin-right: 30%; */
+           color: $p-cl;
+        }
+    }
+    ul {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            display: block;
+        }
+        a {
+            color: $s-cl;
+            font-size: 43px;
+            font-family: 'ab';
+            text-decoration: none;
+            line-height: 85px;
+            text-transform: capitalize;
+            display: inline-block;
+            position: relative;
+            padding-left: 0px;
+            
+            &:active,
+            &:hover {
+                color: $p-cl;
+                &:before {
+                    opacity: 1;
+                }
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                background-image: url(https://proteenlive-old.s3.ap-south-1.amazonaws.com/img/menu-rocket.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 201px;
+                height: 89px;
+                left: -250px;
+                top: 40px;
+                opacity: 0;
+                transition: 0.3s all ease;
+                @include maxsm {
+                    width: 90px;
+                    height: 49px;
+                    left: -100px;
+                    top: 20px;
+                }
+            }
+            &.active {
+                color: $p-cl;
+                font-weight: bold;
+            }
+
+            @include maxms {
+                font-size: 18px;
+                line-height: 3;
+            }
+
+            @include maxsm {
+                font-size: 22px;
+                line-height: 2;
+            }
+        }
+    }
+    .menu-rocket {
+        position: absolute;
+        transition: all 0.5s;
+        @include maxsm {
+            max-width: 100px;
+        }
+    }
+    .menu-close {
+        font-size: 40px;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        text-decoration: none;
+        color: $r-cl;
+        @include maxms {
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
+
+.nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li > a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 30px;
+        position: relative;
+        padding: 27px 0 27px 25px;
+        display: block;
+        &:hover {
+            color: $cl-complete;
+        }
+        @include maxsm {
+            font-size: 18px;
+            padding: 8px 0;
+        }
+    }
+    li {
+        float: left;
+        @include maxsm {
+            padding-left: 10px;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+        &.n-coin {
+            & > a {
+                font-family: 'hb';
+                font-size: 23px;
+                width: 170px;
+                display: block;
+                @include maxsm {
+                    font-size: 14px;
+                    width: auto;
+                    display: block; //text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    line-height: 22px;
+                }
+            }
+            span.coins {
+                margin-right: 5px;
+                display: inline-block;
+                @include maxsm {
+                    float: left;
+                    width: 15px;
+                    height: 15px;
+                    margin-top: 3px;
+                }
+            }
+            .submenu {
+                z-index: 999;
+            }
+        }
+        &.n-user {
+            .submenu {
+                z-index: 999;
+            }
+            & > a {
+                display: block;
+                margin-top: -5px;
+                font-size: 40px;
+                @include maxsm {
+                    font-size: 27px;
+                    margin-top: -3px;
+                }
+                .badge {
+                    position: absolute;
+                    top: 16px;
+                    right: -8px;
+                    height: 20px;
+                    width: 20px;
+                    display: block;
+                    background-color: $p-cl;
+                    border-radius: 50%;
+                    color: #fff;
+                    text-align: center;
+                    font-family: 'hn-b';
+                    font-size: 13px;
+                    padding: 0;
+                    line-height: 20px;
+                    @include maxsm {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.coins,
+.n-user,
+.n-coin,
+.n-window,
+.n-menu {
+    & > a {
+        line-height: 30px;
+    }
+}
+
+.coins {
+    @extend .i-coin;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+// Here goes submenu functionality
+.submenu-container {
+    position: relative;
+    @include maxsm {
+        position: static;
+
+    }
+    .submenu {
+        width: 400px;
+        background-color: $lightgrey;
+        padding: 20px;
+        position: absolute;
+        visibility: hidden;
+        top: 100%;
+        right: 0;
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        @include maxsm {
+            width: 100%;
+            text-align: center;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 20px solid $lightgrey;
+            @include maxsm {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &.active {
+        .submenu {
+            // top:100%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .btns {
+        text-align: center;
+        padding-top: 15px;
+        .btn {
+            font-weight: 900;
+            color: $white;
+            &:hover{
+                color: #fff !important;
+                background-color: #f11f03 !important;
+                border-color: #ce1a02 !important;
+            }
+        }
+    }
+    h2 {
+        color: $white;
+        padding: 0;
+        margin: 0;
+        font-size: 33px;
+        font-family: 'am';
+        display: block;
+    }
+    p {
+        color: $white;
+        padding: 0;
+        margin: 0;
+        font-family: 'ht';
+        display: block;
+        font-size: 14px;
+    }
+    .user-avatar {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .user-name {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+    }
+    .vol-btn {
+        margin-top: 20px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        span {
+            cursor: pointer;
+        }
+    } // For procoins
+    &.n-coin {
+        .submenu {
+            width: 260px;
+            @include maxsm {
+                width: 100%;
+            }
+        }
+        h2 {
+            padding-top: 30px;
+        }
+        .btns {
+            text-align: left;
+            @include maxsm {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+.user-snapshot {
+    display: block;
+    margin-top: 20px;
+}
+
+
+// Fixed navigation
+body {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+nav.fixed-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+body.fixed-nav {
+    &.sec-overflow {
+        overflow-x: hidden;
+    }
+    padding-top: 87px;
+    @include maxsm {
+        padding-top: 66px;
+    }
+}
+
+body.fixedPosition {
+    overflow: hidden;
+}
+
+.inactive {
+    display: none;
+}

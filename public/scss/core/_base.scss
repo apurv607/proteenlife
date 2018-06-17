@@ -1,0 +1,73 @@
+body{font-family: 'h';font-size: 14px;color:#000;}
+.dt{display:table;height: 100%;width:100%;}
+.dtc{display:table-cell;height: 100%;width:100%;vertical-align: middle;}
+.mar15{margin: 15px 0;}
+.sec-blank{
+	height: 500px;position: relative;background: $bg-offwhite;
+	@include maxsm{
+		height: 300px;
+	}
+}
+.back-btn{
+    margin-bottom: 30px;
+    @include maxsm{
+        margin-bottom: 20px;
+    }
+    a{
+        display: inline-block;
+        font-size: 22px;
+        font-family: 'hn-b';
+        position: relative;
+        padding-left: 25px;
+        @include maxsm{
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        &:before{
+            position: absolute;
+            content: " ";
+            width: 18px;
+            left: 0;
+            top: 6px;
+            background-image: url(../img/back.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 18px;
+            @include maxsm{
+                top: 8px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &:hover{
+            color: $h-cl;
+            &:before{
+                 background-image: url(../img/back-hover.png);
+            }
+        }
+        
+    }
+}
+.sec-blank-about{    
+    height: 265px;
+    position: relative;
+    background: #eeeeef;
+    @include xlg{
+        height: 140px;
+    }
+    @include maxsm{
+        height: 50px;
+    }
+    
+}
+@include maxsm {
+	.table-responsive{border:none}
+}
+
+@include lg{
+	.container{width: 1170px;}
+}
+
+@media (min-width: 1270px) {
+	.container{width: 1230px;}
+}

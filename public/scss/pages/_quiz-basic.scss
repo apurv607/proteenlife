@@ -1,0 +1,1152 @@
+.quiz-container {
+    padding: 40px 30px;
+    @include maxsm {
+        padding: 20px 15px;
+    }
+    @include maxms {
+        padding: 20px 0;
+    }
+}
+
+.radio.box,
+.checkbox.box {
+    .checker {
+        display: none !important;
+    }
+    label {
+        padding: 8px 15px;
+        text-align: center;
+        border: 2px solid $r-cl;
+        border-radius: 6px;
+        margin-bottom: 25px;
+        transition: 0.3s all ease-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+        em {
+            font-family: h;
+        }
+        img {
+            width: 90px;
+            height: 90px;
+            margin: 10px auto;
+            display: block;
+        }
+    }
+    .correct {
+        border-color: $m-cl;
+        color: $white;
+        background-color: $m-cl;
+        em {
+            color: $white !important;
+        }
+    }
+    .incorrect {
+        border-color: $cl-analyzing;
+        background: $cl-analyzing;
+        color: $white;
+        em {
+            background: $cl-analyzing !important;
+            color: $white;
+        }
+    }
+}
+
+.select-box {
+    .custom-select {
+        position: relative;
+        &:before {
+            display: inline-block;
+            content: "<";
+            color: $r-cl;
+            font-size: 20px;
+            position: absolute;
+            right: 15px;
+            top: 11px;
+            text-decoration: inherit;
+            transform: rotate(-90deg);
+            cursor: pointer;
+            z-index: 0;
+            font-family: h;
+            pointer-events: none;
+            @include maxms {
+                top: 6px;
+            }
+        }
+        select {
+            appearance: none;
+        }
+        .form-control {
+            padding: 8px 30px 8px 10px !important;
+            text-align: center;
+            border: 2px solid $r-cl;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-family: h;
+            font-size: 23px;
+            color: $r-cl;
+            height: 100%;
+            transition: .3s all ease-out;
+            cursor: pointer;
+            @include maxsm {
+                font-size: 18px;
+                padding: 6px 30px;
+            }
+            @include maxms {
+                font-size: 16px;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.quiz_view .quiz-ans .box {
+    input:checked ~ em {
+        color: $r-cl !important;
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.quiz-ans {
+    .question-img {
+        &.quiz-inter {
+            //max-width: 220px;
+        }
+    }
+    .clearfix {
+        clear: both;
+    }
+    .video-img {
+        //max-width: 350px;
+        margin: 0 auto 30px;
+        text-align: center;
+        iframe {
+            width: 100%;
+            @include maxms {
+                height: auto;
+            }
+        }
+    }
+    .btn-next {
+        font-size: 16px;
+        padding: 9px 45px;
+        transition: 0.3s all ease-out;
+        color: $white !important;
+        &:hover,
+        &:focus {
+            background: $i-cl !important;
+            border-color: $i-cl !important;
+            color: $white !important;
+        }
+    }
+}
+
+.correct {
+    border-color: $m-cl !important;
+    color: $white !important;
+    background: $m-cl !important;
+}
+
+.incorrect {
+    border-color: $cl-analyzing !important;
+    background: $cl-analyzing !important;
+    color: $white !important;
+}
+
+.answer-statement {
+    // border: 1px solid $i-cl;
+    margin-bottom: 20px; // padding: 10px;
+    text-align: center;
+    background: $i-cl;
+    border-radius: 6px;
+    color: $white;
+    p {
+        font-size: 16px;
+        color: $white;
+        @include maxms {
+            font-size: 14px;
+        }
+    }
+    .t-cell {
+        padding-right: 20px;
+    }
+    #showResponseMessage {
+        margin-bottom: 0;
+        padding: 10px;
+    }
+    #showResponseMessage:empty {
+        display: none;
+    }
+}
+
+.quiz-text {
+    //width: 60%;
+    //margin: 0 auto;
+    .block-grp {
+        text-align: center;
+    }
+    .form-control {
+        border: none;
+        border-bottom: 2px solid $i-cl;
+        box-shadow: none;
+        font-size: 20px;
+        @include maxsm {
+            font-size: 16px;
+        }
+        @include maxms {
+            font-size: 14px;
+        }
+        &.form-block {
+            width: 35px;
+            display: inline-block;
+            border: 2px solid;
+            height: 35px;
+            padding: 2px;
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+}
+
+.drag-sec {
+    width: 45%;
+    float: left;
+    text-align: center;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid $lightgrey;
+            padding: 5px;
+            margin: 0 5px 9px 0;
+            vertical-align: top;
+            &:nth-child(even) {
+                margin-right: 0;
+
+            }
+            @include maxsm {
+                width: 80px;
+                height: 80px;
+                margin: 0 0 9px;
+            }
+            .drag-box {
+                width: 100%;
+                height: 100%;
+                cursor: -webkit-grab;
+                transition: .3s all ease-out;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            /* span{
+                display: block;width: 100%;height: 100%;
+                img{
+                    width: 100%;height: 100%;
+                }
+            }*/
+        }
+    }
+}
+
+.drop-sec {
+    width: 45%;
+    float: right;
+    text-align: center;
+}
+
+.quiz-video {
+    padding: 15px 20px;
+    border: 1px dashed $lightgrey;
+    .video-img {
+        img {
+            width: 100%;
+        }
+    }
+    p {
+        font-size: 20px;
+        font-family: 'h';
+
+    }
+    .progress-bar {
+        width: calc(100% - 6px);
+        height: 5px;
+        background: #e0e0e0;
+        padding: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+        margin-bottom: 15px;
+        .progress-bar-fil {
+            display: block;
+            height: 5px;
+            background: $p-cl;
+            border-radius: 3px;
+            /*transition: width 250ms ease-in-out;*/
+            transition: width 30s ease-in-out;
+            margin-top: -3px;
+            margin-left: -2px;
+        }
+    }
+}
+
+.quiz-audio {
+    max-width: 220px;
+    margin: 0 auto;
+    audio {
+        width: 100%;
+    }
+}
+
+.sort-list {
+    width: 40%;
+    float: left;
+    @include maxsm {
+        float: none;
+        width: 100%;
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        li {
+            border: 1px solid $lightgrey;
+            border-radius: 5px;
+            height: 92px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            @include maxsm {
+                font-size: 14px;
+            }
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+.sort-list-ans {
+    width: 55%;
+    float: right;
+    @include maxsm {
+        float: none;
+        width: 100%;
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+        li {
+            border: 1px solid $lightgrey;
+            border-radius: 5px;
+            height: 92px;
+            padding: 10px 30px 10px 10px;
+            margin-bottom: 15px;
+            position: relative;
+            cursor: -webkit-grab;
+            transition: .3s all ease-out;
+            overflow-y: auto;
+            font-size: 18px;
+            color: #565b5f;
+            @include maxsm {
+                font-size: 14px;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+            .ui-icon {
+                position: absolute;
+                content: '';
+                background-image: url(../img/order.png);
+                top: 10px;
+                right: 10px;
+                background-position: center;
+                background-size: contain;
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }
+    &.full-width {
+        width: 100%;
+        li {
+            min-height: auto;
+        }
+    }
+}
+
+.multiple-select {
+    font-size: 14px !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    color: #66c6e6 !important;
+}
+
+.width-50 {
+    text-align: center;
+    label {
+        width: 45%; // float: left; //padding: 0 15px;
+        margin: 0 10px 25px;
+        display: inline-block !important;
+        vertical-align: text-bottom;
+        max-height: 70px;
+        min-height: 70px;
+        vertical-align: text-bottom;
+        overflow-y: auto;
+        overflow-x: hidden;
+        @include maxsm {
+            width: 100%;
+            margin: 0 0 25px;
+            min-height: auto;
+            max-height: auto;
+        }
+        em {
+            max-height: 66px;
+            min-height: 66px;
+            padding: 6px 15px !important;
+            @include maxsm {
+                min-height: auto;
+                max-height: auto;
+            }
+        }
+        img {
+            width: 90px !important;
+            height: 90px !important;
+            margin: 14px auto 10px !important;
+        }
+    }
+}
+
+.question-img.quiz-inter.double-img {
+    max-width: 100%;
+    span {
+        display: inline-block;
+        width: 50%;
+        margin-left: -4px;
+        padding: 0 15px;
+    }
+}
+
+.modal-screen {
+    text-align: left !important;
+    h3 {
+        //text-decoration: underline;
+        color: $h-cl !important;
+        font-size: 25px !important;
+        padding-right: 30px;
+        @include maxsm {
+            font-size: 20px !important;
+        }
+        @include maxms {
+            font-size: 18px !important;
+        }
+    }
+    ol {
+        margin-bottom: 20px;
+    }
+}
+
+.upload-screen .btn-primary.btn-go {
+    padding: 8px 35px;
+    color: $white;
+    &:hover{
+        background-color: $cl-procedural;
+        border-color: $cl-procedural;
+        color: $white;
+    }
+}
+
+.cost-estimator {
+    border-color: transparent !important;
+    .nav {
+        margin: 0 -20px;
+        border-color: $p-cl !important;
+        > li {
+            margin-right: 3px;
+            > a {
+                background-color: $p-cl !important;
+                color: $white !important;
+                border-radius: 5px 5px 0 0;
+            }
+            &.active {
+                a {
+                    background-color: $i-cl !important;
+                    color: $white;
+                }
+            }
+            &:hover {
+                a {
+                    background-color: $i-cl !important;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .tab-content {
+        padding-top: 30px;
+    }
+    .upload-content {
+        position: relative;
+    }
+}
+
+.upld-img {
+    list-style: none;
+    text-align: center;
+    padding: 30px 0 15px 0;
+    li {
+        width: 47%;
+        margin: 1%;
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        @include maxlg {
+            width: 100%;
+            margin: 0;
+            padding: 0 15px;
+        }
+        @include maxms {
+            padding: 0 5px;
+        }
+        .upd-detail {
+            .img-cont {
+                float: left;
+                padding: 5px;
+                border: 1px solid #6f6f6f;
+                margin-right: 5px;
+                img {
+                    width: 90px;
+                    height: 90px;
+                    display: block;
+                    @include maxsm {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+                .img-inner {
+                    position: relative;
+                    cursor: zoom-in;
+                }
+                .under-progress {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 25px;
+                    background: #888888;
+                    color: $white;
+                    font-size: 12px;
+                    @include maxsm {
+                        font-size: 10px;
+                        height: 21px;
+                        line-height: 1.8;
+                    }
+                    &.under-review {
+                        background: $i-cl;
+                    }
+                    &.approved {
+                        background: $m-cl;
+                    }
+                    &.rejected {
+                        background: $p-cl;
+                    }
+                }
+            }
+            .detail-cont {
+                border: 1px solid $p-cl;
+                margin-left: 102px;
+                height: 102px;
+                padding: 5px 5px 16px 5px;
+                background: rgba(212, 56, 35, 0.22);
+                overflow: hidden;
+                position: relative;
+                @include maxsm {
+                    height: auto;
+                    min-height: 82px;
+                    margin-left: 82px;
+                }
+                .cst-grp {
+                    position: absolute;
+                    top: 3px;
+                    right: 5px;
+                    .btn-dlt {
+                        border: none;
+                        background: transparent;
+                        color: #888;
+                        font-size: 15px;
+                        line-height: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        -webkit-transition: all 0.5s;
+                        -moz-transition: all 0.5s;
+                        -o-transition: all 0.5s;
+                        transition: all 0.5s;
+                        margin-left: 9px;
+                    }
+                    .pnt-get {
+                        border: 1px solid #000;
+                        font-size: 10px;
+                        padding: 2px;
+                        line-height: 1;
+                        border-radius: 3px;
+                        color: #fff;
+                        background: #000;
+                    }
+                }
+            }
+            .date {
+                border-bottom: 1px solid $p-cl;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+                min-height: 40px;
+                p {
+                    font-size: 11px;
+                    color: #888888;
+                    margin-bottom: 0;
+                    padding-right: 23px;
+                    &.approved-date,
+                    &.approved-by {
+                        color: $m-cl;
+                    }
+                }
+            }
+            .view-img {
+                position: absolute;
+                right: 5px;
+                bottom: 0;
+                font-size: 12px;
+                color: $p-cl;
+                cursor: pointer;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s;
+            }
+        }
+    }
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 9999;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation - Zoom in the Modal */
+    .modal-content,
+    #caption {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close-modal:hover,
+    .close-modal:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+}
+
+.quiz-que .que {
+    @include maxmd {
+        font-size: 23px;
+    }
+}
+
+.box {
+    .checker {
+        display: none !important;
+    }
+    label.checkbox,
+    label.radio {
+        padding: 0;
+        text-align: center;
+        border: 2px solid $r-cl;
+        border-radius: 6px;
+        margin-bottom: 25px;
+        transition: 0.3s all ease-out;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+        }
+        em {
+            font-family: h;
+            padding: 8px 15px;
+            display: block;
+            @include maxsm {
+                padding: 6px 15px;
+                font-size: 18px !important;
+            }
+            @include maxms {
+                font-size: 15px !important;
+            }
+        }
+        img {
+            width: 90px;
+            height: 90px;
+            margin: 10px auto;
+            display: block;
+        }
+    }
+    .correct {
+        border-color: $m-cl;
+        background: $m-cl;
+        color: $white em {
+            color: $white !important;
+        }
+    }
+    .incorrect {
+        border-color: $cl-analyzing;
+        color: $white;
+        em {
+            color: $white !important;
+        }
+    }
+}
+
+.quiz_view .quiz-ans .box .correct em {
+    color: $white !important;
+}
+
+.level-complete {
+    padding: 10px 0;
+    .cong-hero {
+        max-width: 100px;
+        overflow: hidden;
+        border: 2px solid $p-cl;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding: 5px;
+        @include maxsm {
+            max-width: 90px;
+        }
+        @include maxms {
+            max-width: 80px;
+        }
+    }
+    .level-box {
+        max-width: 350px;
+        margin: 30px auto;
+        text-align: center;
+        overflow: hidden;
+        p {
+            color: $white;
+            @include maxms {
+                font-size: 15px;
+            }
+        }
+        .box-head {
+            background: $p-cl;
+            padding: 15px 15px;
+            position: relative;
+            @include maxsm {
+                padding: 10px 15px;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 210px solid transparent;
+                border-right: 173px solid transparent;
+                border-top: 21px solid $p-cl;
+                bottom: -21px;
+                right: 0px;
+                z-index: 9;
+                @include maxms {
+                    border-left: 141px solid transparent;
+                    border-right: 124px solid transparent;
+                    border-top: 19px solid $p-cl;
+                    bottom: -19px;
+                }
+            }
+            p {
+                color: $white;
+                font-family: 'am';
+                font-size: 25px;
+                text-transform: capitalize;
+                margin-bottom: 0;
+                @include maxsm {
+                    font-size: 20px;
+                }
+            }
+        }
+        .box-content {
+            padding: 60px 15px 40px;
+            background: $i-cl;
+            position: relative;
+            @include maxmd {
+                padding: 50px 15px 30px;
+            }
+            @include maxms {
+                padding: 40px 15px 25px;
+            }
+            .social {
+                padding: 0;
+                list-style-type: none;
+                margin: 15px 0 0;
+                li {
+                    display: inline-block;
+                    font-size: 17px;
+                    margin-left: 10px;
+                    a {
+                        color: $white;
+                        &:hover {
+                            color: $lightgrey;
+                        }
+                    }
+                }
+            }
+        }
+        .feedback-text {
+            margin: 20px 0;
+            p {
+                font-family: hn-b;
+                font-size: 20px;
+                margin-bottom: 0;
+                @include maxms {
+                    font-size: 17px;
+                }
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .level-btn {
+            .btn {
+                padding: 8px 15px;
+                &.try {
+                    background-color: $i-cl;
+                    border-color: $i-cl;
+                }
+            }
+        }
+    }
+}
+
+.cong-block {
+    text-align: center;
+    padding: 20px;
+    .col-xs-4 {
+        @include maxms {
+            width: 100%
+        }
+    }
+    .col-xs-8 {
+        @include maxms {
+            width: 100%;
+            padding-top: 20px;
+        }
+    }
+    .emojis-img {
+        display: inline-block;
+        color: $p-cl;
+        vertical-align: middle;
+        /*@include maxlg {
+            max-width: 70px;
+        }*/
+        @include maxsm {
+            max-width: 50px;
+        }
+        @include maxms {
+            max-width: 50px;
+        }
+        &.emojis-icon {
+            //transform: scalex(-1);
+            vertical-align: middle;
+            font-size: 60px;
+            padding: 23px 0px 0 10px;
+            @include maxlg {
+                font-size: 43px !important;
+            }
+            @include maxsm {
+                font-size: 24px !important;
+                padding: 16px 0px 0 5px;
+            }
+            @include maxms {
+                font-size: 25px;
+                padding-left: 0px;
+            }
+        }
+    }
+    h2 {
+        color: $p-cl;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        position: relative;
+        @include maxsm {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        @include maxms {
+            font-size: 21px;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            width: 25%;
+            height: 2px;
+            background: $p-cl;
+            bottom: 0;
+            left: 50%;
+            margin: 0 auto;
+            transform: translateX(-50%);
+        }
+    }
+    p {
+        font-size: 20px;
+        strong {
+            font-family: am;
+            font-weight: 500;
+            font-size: 30px;
+            @include maxmd {
+                font-size: 25px;
+            }
+            @include maxsm {
+                font-size: 22px;
+            }
+            @include maxms {
+                font-size: 18px;
+            }
+        }
+        @include maxmd {
+            font-size: 17px;
+        }
+        @include maxsm {
+            font-size: 15px;
+        }
+    }
+}
+
+.quiz_view .quiz-ans .box .correct input:checked ~ em {
+    background: $m-cl !important;
+    color: $white !important;
+    border: 2px solid #000;
+    margin: -2px;
+    border-radius: 6px;
+}
+
+.quiz_view .quiz-ans .box .incorrect input:checked ~ em {
+    background: $cl-analyzing !important;
+    color: $white !important;
+    border: 2px solid #000;
+    margin: -2px;
+    border-radius: 6px;
+}
+
+#answerRightWrongMsg:empty {
+    display: none;
+}
+
+#answerRightWrongMsg {
+    padding: 10px;
+}
+
+.challengers_table {
+    border: none;
+    white-space: nowrap;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    table {
+        width: 100%;
+        th {
+            border-bottom: 1px solid $p-cl;
+            text-align: center;
+            padding: 0 15px 15px 15px;
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 10px;
+                display: inline-block;
+            }
+            span {
+                margin-top: 10px;
+                font-size: 16px;
+                color: $p-cl; //font-weight: 600;
+                font-family: 'am';
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        tr {
+            font-size: 15px;
+            td {
+                padding: 15px;
+            }
+        }
+        .score {
+            color: $m-cl;
+        }
+        .rank {
+            color: $w-cl;
+        }
+        .point {
+            color: $p-cl;
+        }
+    }
+}
+
+.quiz-text {
+    max-width: 50%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    @include maxsm {
+        max-width: 80%;
+    }
+    @include maxms {
+        max-width: 100%;
+    }
+}
+
+.form-imgSubmit {
+    margin-bottom: 20px;
+}
+
+.drag_drp {
+    float: left;
+    width: 45%;
+    margin: 15px 2.5%;
+    padding: 0;
+    list-style-type: none;
+    @include maxsm {
+        width: 100%;
+        margin: 15px 0;
+    }
+    li {
+        float: left;
+        width: 33.33%;
+        border: 1px solid $lightgrey; // background: rgba(15, 8, 26, 0.65);
+        display: block;
+        span {
+            padding: 3px;
+            display: block;
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+.title_drg_drp {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.ui-draggable-dragging {
+    width: 100px !important;
+    height: 100px !important;
+    z-index: 99;
+}
+
+.time_out_cst {
+    width: 100%;
+    height: 5px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-top: -5px;
+    z-index: 99;
+}
+
+.modal_content_fill {
+    padding: 10px;
+}
+
+#quiz_material_popup {
+    .close {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+}
+
+#single_line_answer_box {
+    text-transform: uppercase;
+    text-align: center;
+    border-image: none;
+}
+.quiz_view .quiz-ans .box .width-50 .incorrect input:checked~em{margin: 0;}

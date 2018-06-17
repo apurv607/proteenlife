@@ -1,0 +1,414 @@
+.profile-detail {
+    .add-icon {
+        right: 142px;
+        text-align: center; //vertical-align: middle;
+        // position: relative;
+        @include maxlg {
+            right: 100px;
+        }
+        @include maxsm {
+            right: 60px;
+            img {
+                width: 30px;
+            }
+        }
+
+        em {
+            font-size: 15px;
+            font-style: normal;
+            display: block;
+            line-height: 1;
+            text-align: center;
+            margin-top: 8px;
+            @include maxsm {
+                margin-top: 5px;
+                font-size: 13px;
+            }
+        }
+        &.sent-icon {
+            font-size: 49px;
+            margin-top: 10px;
+            /* @include maxlg{
+                font-size: 34px;
+            }*/
+            @include maxsm {
+                font-size: 30px;
+                margin-top: 0;
+            }
+
+        }
+        &.accepted-icon {
+            font-size: 60px;
+            @include maxsm {
+                font-size: 30px;
+            }
+        }
+        &.icon-add {
+            margin-top: -10px;
+            @include maxsm {
+                margin-top: 0;
+            }
+            em {
+                margin-top: 0;
+                @include maxsm {
+                    margin-top: 5px;
+                }
+            }
+        }
+        .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+}
+
+.icon-add a {
+
+    &:hover {
+        img {
+            background-position: 0 40%;
+        }
+    }
+}
+
+.sent-icon a:hover img {
+    background-position: 0 80%;
+}
+
+.accepted-icon a:hover img {
+    background-position: 0 0%;
+}
+
+.respond-request {
+    margin-top: -9px;
+    @include maxsm {
+        margin-top: 0;
+    }
+}
+
+.respond-request a:hover img,
+.respond-request a:focus img {
+    background-position: 0 0%;
+}
+
+.respond-request a em {
+    margin-top: 0px !important;
+}
+
+.sec-member {
+    &:before {
+        display: none;
+    }
+}
+
+.member-detail {
+    padding-bottom: 82px;
+    @include maxms {
+        padding-bottom: 30px;
+    }
+    h1 {
+        max-width: 470px;
+    }
+    .chat-icon {
+        font-size: 74px;
+
+        @include maxsm {
+            font-size: 30px;
+        }
+        i {
+            font-weight: 700;
+        }
+    }
+    p {
+        margin-top: 53px;
+    }
+    .profile-img {
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: auto;
+        background-position: center;
+        margin: 0 auto 20px;
+    }
+    .expand-btn {
+        font-size: 20px;
+        font-family: hl;
+        text-decoration: underline;
+        cursor: pointer;
+        @include maxms {
+            font-size: 17px;
+        }
+        &:hover {
+            color: $dark;
+        }
+    }
+}
+
+.sec-traits {
+    margin-top: 54px;
+    width: 100%;
+    margin-bottom: 0;
+    @include maxsm {
+        margin-top: 35px;
+        margin: 0 auto;
+    }
+    li {
+        // margin-right: 15px;
+        margin-bottom: 20px;
+        @include maxsm {
+            // margin: 0 0 15px;
+            width: 100%;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .ck-button {
+            padding: 11px 15px;
+            background: $cl-complete;
+            border: 1px solid $cl-complete;
+            color: $white;
+            font-size: 24px;
+            font-family: hl;
+            text-transform: capitalize;
+            min-width: 222px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: inline-flex;
+            @include maxmd {
+                font-size: 20px;
+            }
+            @include maxms {
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+.traits-expand {
+    display: none;
+    .sec-traits {
+        margin-top: 0;
+    }
+}
+
+.describe-traits {
+    padding: 76px 0 29px;
+    background: $white;
+    p {
+        font-family: 'ht';
+    }
+    .survey-list {
+        margin-bottom: 0;
+        @include maxsm {
+            margin-bottom: 0;
+        }
+    }
+    .form-btn {
+        .icon {
+            margin-left: 116px;
+            line-height: 1.25;
+        }
+    }
+}
+
+.sec-progress {
+    .tab-content {
+        .tab-pane {
+            .sec-popup {
+                margin-top: -70px;
+                @include maxmd {
+                    margin-top: -55px;
+                }
+            }
+        }
+    }
+    &.sec-tab {
+        background: $white;
+        .my-progress {
+            border: 2px solid #e0e6eb;
+            border-top: 0;
+            @include maxsm {
+                margin-top: 30px;
+            }
+            @include maxms {
+                margin-top: 20px;
+                border: none;
+            }
+            .custom-tab-container {
+                li {
+                    &.active {
+
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            width: 94.5%;
+                            height: 2px;
+                            background: #e0e6eb;
+                            z-index: 999;
+                            @include maxlg {
+                                width: 93.5%;
+                            }
+                            @include maxmd {
+                                width: 91.5%;
+                            }
+                            @include maxsm {
+                                width: 100%;
+                            }
+                        }
+                        &.tab-2 {
+                            &:before {
+                                width: 90%;
+                                @include maxlg {
+                                    width: 87%;
+                                }
+                                @include maxmd {
+                                    width: 83%;
+                                }
+                                @include maxsm {
+                                    width: 100%;
+                                }
+                            }
+
+                        }
+                        a {
+                            &:after {
+                                border-right: 2px solid #e0e6eb;
+                            }
+                            &:before {
+                                border-left: 2px solid #e0e6eb;
+                            }
+                        }
+                    }
+                    &.tab-color-2 a,
+                    &.tab-color-2 a > span,
+                    &.tab-color-2 a:before,
+                    &.tab-color-2 a:after {
+                        background-color: $cl-procedural !important;
+                    }
+                    &.active.custom-tab a,
+                    &.active.custom-tab a > span,
+                    &.active.custom-tab a:before,
+                    &.active.custom-tab a:after {
+                        background-color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sec-tab {
+    .sec-popup {
+        /*display: none;*/
+    }
+}
+
+.interest-list {
+
+    li {
+        text-align: center;
+        figure {
+            @include maxsm {
+                max-width: 85%;
+                margin: 0 auto;
+            }
+            @include maxms {
+                max-width: 100%;
+            }
+            figcaption {
+                font-size: 26px;
+                font-family: ht;
+                color: $lightgrey;
+                margin-top: 23px;
+                @include maxsm {
+                    font-size: 22px;
+                    margin-top: 18px;
+                }
+                @include maxms {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.traits-badge {
+    font-size: 15px;
+    color: $lightgrey;
+    background: $white;
+    position: absolute;
+    right: 20px;
+    top: -4px;
+    width: 28px;
+    height: 20px;
+    font-family: am;
+    font-weight: 700;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 12px solid #fff;
+        bottom: -12px;
+        right: 0px;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        top: 0px;
+        left: -5px;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-right: 6px solid #fff;
+        z-index: 0;
+    }
+}
+
+.request-function {
+    font-size: 15px;
+    margin: 0 -8px 0;
+    width: 80px;
+    ul {
+        margin-bottom: 0;
+    }
+    li a {
+        color: $lightgrey !important;
+        &.accept {
+            color: green !important;
+
+        }
+        &.decline {
+            color: $p-cl !important;
+            i {
+                display: inline-block;
+                transform: rotate(180deg);
+            }
+        }
+        i {
+            //  color: $lightgrey;
+            margin-right: 5px;
+        }
+
+    }
+}
+.strength-list{
+    .data-explainations{
+        margin: 20px 0 40px;
+        @include maxsm{
+            margin: 20px 0 30px;
+        }
+        .data{
+            float: none;
+            display: inline-block;
+        }
+    }
+}
